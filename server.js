@@ -1,13 +1,12 @@
 const express = require('express');
 const app = express();
-// const mongoose = require('mongoose');
+// mongoose already required below around LINE 15.
 const methodOverride = require('method-override');
 
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:false}));
 
-const guitarsController =
-require('./controllers/guitars.js');
+const guitarsController = require('./controllers/guitars.js');
 app.use('/guitars', guitarsController)
 
 const PORT = process.env.PORT || 3000; //To work w/ Heroku

@@ -6,8 +6,7 @@
   </head>
   <body>
     <h1>Guitars Edit Page</h1>
-    <form
-    action="/guitars/<%=guitar.id%>?_method=PUT"
+    <form action="/guitars/<%=guitar.id%>?_method=PUT"
      method="POST">
        Brand: <input type="text" name="brand" value="<%=guitar.brand%>"><br/>
        Number of Strings: <input type="text" name="strings" value="<%=guitar.strings%>"><br/>
@@ -15,8 +14,7 @@
        Type of Fretboard: <input type="text" name="fretboard" value="<%=guitar.fretboard%>"><br/>
 
         Ready to Build:
-          <input type="checkbox"
-          name="readyToBuild"
+          <input type="checkbox" name="readyToBuild"
               <% if(guitar.readyToBuild === true) { %>
                   checked
               <% } %>

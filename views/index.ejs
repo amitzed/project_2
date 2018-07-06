@@ -7,20 +7,19 @@
   <body>
     <h1>Guitars Index Page</h1>
     <ul>
-      <% for(let i = 0; i < guitars.length;
-      i++){ %>
+      <% for(let i = 0; i < guitars.length; i++){ %>
         <li>
           Your
             <a href="/guitars/<%=guitars[i].id%>">
               <%=guitars[i].brand; %>
             </a>
-          with <%=guitars[i].strings; %>
-          and made out of <%=guitars[i].wood; %>
-          with a fret board made from <%=guitars[i].fretboard; %>.
+          guitar with <%=guitars[i].strings; %>
+          strings which is made out of <%=guitars[i].wood; %>
+          wood with a <%=guitars[i].fretboard; %> fret board:
           <% if(guitars[i].readyToBuild === true){ %>
-            Your Guitar is Ready to Build
+            IS READY TO BE BUILT!
           <% } else { %>
-            Rebuild Your Guitar
+            Cannot be built to these specs
           <% } %>
           <form
           action="/guitars/<%=guitars[i].id%>?_method=DELETE" method="POST">
