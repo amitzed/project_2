@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/amitzed/project_2#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "method-override": "^2.3.10",
     "mongoose": "^5.2.1"
   }
 }
