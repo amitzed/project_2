@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/amitzed/project_2/issues"
   },
-  "homepage": "https://github.com/amitzed/project_2#readme"
+  "homepage": "https://github.com/amitzed/project_2#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
