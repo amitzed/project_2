@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const guitarSchema = new mongoose.Schema({
-  brand:String,
-  strings:Number,
-  wood:String,
-  fretboard:String,
+  brand: String,
+  strings: {type: Number, max: 12},
+  wood: String,
+  fretboard: String,
   readyToBuild: Boolean
 });
 

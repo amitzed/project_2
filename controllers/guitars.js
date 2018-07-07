@@ -10,50 +10,50 @@ const Guitar = require('../models/guitars.js');
 //         strings:6,
 //         wood:'maple',
 //         fretboard:'ebony'
-//         readyToBuild: true
+//         readyToBuild:true
 //       },
 //       {
 //         brand:'fender'
 //         strings:6,
 //         wood:'alder',
 //         fretboard:'rosewood'
-//         readyToBuild: true
+//         readyToBuild:true
 //       },
 //       {
 //         brand:'gibson'
 //         strings:12,
 //         wood:'maple',
 //         fretboard:'rosewood'
-//         readyToBuild: true
+//         readyToBuild:true
 //       },
 //       {
 //         brand:'gibson'
 //         strings:6,
 //         wood:'koa',
 //         fretboard:'ebony'
-//         readyToBuild: false
+//         readyToBuild:false
 //       },
 //       {
 //         brand:'fender'
 //         strings:6,
 //         wood:'maple',
 //         fretboard:'ebony'
-//         readyToBuild: false
+//         readyToBuild:false
 //       },
 //       {
 //         brand:'fender'
 //         strings:12,
 //         wood:'mahogany',
 //         fretboard:'ebony'
-//         readyToBuild: false
+//         readyToBuild:false
 //       }
 //     ],
 //     (err, data)=>{
-//         res.redirect('/guitars')
+//         res.redirect('/guitars');
 //     }
 //   )
 // });
-//
+
 router.delete('/:id', (req, res)=>{
   Guitar.findByIdAndRemove(req.params.id, (err, deletedGuitar)=>{
     res.redirect('/guitars');
@@ -68,7 +68,7 @@ router.get('/:id/edit', (req, res)=>{
         guitar:foundGuitar
       }
     );
-  });
+  })
 });
 
 router.put('/:id', (req, res)=>{
@@ -100,7 +100,7 @@ router.get('/:id', (req, res)=>{
     res.render('show.ejs', {
       guitar:foundGuitar
     });
-  });
+  })
 });
 
 router.post('/', (req, res)=>{

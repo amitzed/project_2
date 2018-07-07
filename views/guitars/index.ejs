@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Guitars Index Page</h1>
+    <ul>
+      <% for(let i = 0; i < guitars.length; i++){ %>
+        <li>
+          Your
+            <a href="/guitars/<%=guitars[i].id%>">
+              <%=guitars[i].brand; %>
+            </a>
+          guitar with <%=guitars[i].strings; %>
+          strings which is made out of <%=guitars[i].wood; %>
+          wood with a <%=guitars[i].fretboard; %> fret board:
+          <% if(guitars[i].readyToBuild === true){ %>
+            IS READY TO BE BUILT!
+          <% } else { %>
+            Cannot be built to these specs
+          <% } %>
+          <form
+          action="/guitars/<%=guitars[i].id%>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE"/>
+          </form>
+          <a href="/guitars/<%=guitars[i].id%>/edit">
+            Edit
+          </a>
+        </li>
+      <% } %>
+    </ul>
+    <nav>
+      <a href="/guitars/new">Create a New Guitar</a>
+    </nav>
+  </body>
+</html>
