@@ -2,14 +2,14 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>String Theory</title>
     </head>
     <body>
       <h1>
           <% if(currentUser) { %>
-              Welcome <%=currentUser.username %>
+              Welcome to String Theory <%=currentUser.username %>
           <% } else { %>
-              Welcome!
+              Welcome to String Theory!
           <% }%>
       </h1>
       <nav>
@@ -31,7 +31,9 @@
       </nav>
       <% if(currentUser) { %>
           <main>
-              Welcome to the <a href="/guitars">main application</a>
+              Click Here to  <a href="/guitars">Build Your Dream Guitars</a>
+              <br/><br/>
+              Click Here to  <a href="/basses">Build Your Dream Basses</a>
           </main>
       <% } %>
     </body>

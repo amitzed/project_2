@@ -5,34 +5,34 @@
     <title>String Theory</title>
   </head>
   <body>
-    <h1>Guitars Index Page</h1>
+    <h1>Bass Guitars Index Page</h1>
     <ul>
-      <% for(let i = 0; i < guitars.length; i++){ %>
+      <% for(let i = 0; i < basses.length; i++){ %>
         <li>
           Your
-            <a href="/guitars/<%=guitars[i].id%>">
-              <%=guitars[i].brand; %>
+            <a href="/basses/<%=basses[i].id%>">
+              <%=basses[i].brand; %>
             </a>
-          Guitar with <%=guitars[i].strings; %>
-          strings which is made out of <%=guitars[i].wood; %>
-          wood with a <%=guitars[i].fretboard; %> fret board:
-          <% if(guitars[i].readyToBuild === true){ %>
+          Bass Guitar with <%=basses[i].strings; %>
+          strings which is made out of <%=basses[i].wood; %>
+          wood with a <%=basses[i].fretboard; %> fret board:
+          <% if(basses[i].readyToBuild === true){ %>
             IS READY TO BE BUILT!
           <% } else { %>
             CANNOT be built to these specs
           <% } %>
           <form
-          action="/guitars/<%=guitars[i].id%>?_method=DELETE" method="POST">
+          action="/basses/<%=basses[i].id%>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE"/>
           </form>
-          <a href="/guitars/<%=guitars[i].id%>/edit">
+          <a href="/basses/<%=basses[i].id%>/edit">
             Edit
           </a>
         </li>
       <% } %>
     </ul>
     <nav>
-      <a href="/guitars/new">Create a New Guitar</a>
+      <a href="/basses/new">Create a New Bass Guitar</a>
     </nav>
     <form action="/sessions?_method=DELETE" method="POST">
         <input type="submit" value="Logout"/>

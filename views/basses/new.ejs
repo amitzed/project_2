@@ -5,15 +5,15 @@
     <title>String Theory</title>
   </head>
   <body>
-    <h1>New Guitar Page</h1>
-    <form action="/guitars" method="POST">
+    <h1>New Bass Guitar Page</h1>
+    <form action="/basses" method="POST">
       Brand: <input type="text" name="brand" required/><br/>
-      Number of Strings: <input type="number" name="strings" min="6" max="12" required /><br/>
+      Number of Strings: <input type="number" name="strings" min="4" max="6" required /><br/>
       Type of Wood: <input type="text" name="wood" required /><br/>
       Type of Fretboard: <input type="text" name="fretboard" required /><br/>
 
       Ready to Build: <input type="checkbox" name="readyToBuild"/><br/>
-      <input type="submit" value="Create Your Guitar" />
+      <input type="submit" value="Create Your Bass Guitar" />
     </form>
 
     <form action="/sessions?_method=DELETE" method="POST">

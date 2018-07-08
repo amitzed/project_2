@@ -29,10 +29,18 @@ app.get('/', (req, res)=>{
     currentUser: req.session.currentUser
   });
 });
-
+   // Guitars
 app.get('/guitars/index', (req, res)=>{
     if(req.session.currentUser){
         res.send('the main app');
+    } else {
+        res.redirect('/sessions/new');
+    }
+})
+  // Bass Guitars
+app.get('/basses/index', (req, res)=>{
+    if(req.session.currentUser){
+        res.send('the main');
     } else {
         res.redirect('/sessions/new');
     }
@@ -44,6 +52,9 @@ app.use('/users', userController);
 
 const guitarsController = require('./controllers/guitars.js');
 app.use('/guitars', guitarsController);
+
+const bassesController = require('./controllers/basses.js');
+app.use('/basses', bassesController);
 
 const sessionsController = require('./controllers/sessions.js');
 app.use('/sessions', sessionsController);

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>String Theory</title>
+  </head>
+  <body>
+    <h1>Bass Guitars Edit Page</h1>
+    <form action="/basses/<%=bass.id%>?_method=PUT"
+     method="POST">
+       Brand: <input type="text" name="brand" value="<%=bass.brand%>"><br/>
+       Number of Strings: <input type="number" name="strings" value="<%=bass.strings%>" min="4" max="6"><br/>
+       Type of Wood: <input type="text" name="wood" value="<%=bass.wood%>"><br/>
+       Type of Fretboard: <input type="text" name="fretboard" value="<%=bass.fretboard%>"><br/>
+
+        Ready to Build:
+          <input type="checkbox" name="readyToBuild"
+              <% if(bass.readyToBuild === true) { %>
+                  checked
+              <% } %>
+          /><br/>
+        <input type="submit" value="Update">
+    </form>
+
+    <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Logout"/>
+    </form>
+
+  </body>
+</html>
