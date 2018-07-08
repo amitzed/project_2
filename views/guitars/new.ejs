@@ -7,13 +7,18 @@
   <body>
     <h1>New Guitar Page</h1>
     <form action="/guitars" method="POST">
-      Brand: <input type="text" name="brand" /><br/>
-      Number of Strings: <input type="text" name="strings" /><br/>
-      Type of Wood: <input type="text" name="wood" /><br/>
-      Type of Fretboard: <input type="text" name="fretboard" /><br/>
+      Brand: <input type="text" name="brand" required/><br/>
+      Number of Strings: <input type="number" name="strings" min="6" max="12" required /><br/>
+      Type of Wood: <input type="text" name="wood" required /><br/>
+      Type of Fretboard: <input type="text" name="fretboard" required /><br/>
 
       Ready to Build: <input type="checkbox" name="readyToBuild"/><br/>
       <input type="submit" value="Create Your Guitar" />
     </form>
+
+    <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Logout"/>
+    </form>
+
   </body>
 </html>

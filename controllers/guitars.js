@@ -54,6 +54,13 @@ const Guitar = require('../models/guitars.js');
 //   )
 // });
 
+// json Route
+// router.get('/json', (req, res)=>{
+//   Guitar.find( (err, guitars)=>{
+//     res.send(guitars);
+//   });
+// });
+
 router.delete('/:id', (req, res)=>{
   Guitar.findByIdAndRemove(req.params.id, (err, deletedGuitar)=>{
     res.redirect('/guitars');
@@ -63,7 +70,7 @@ router.delete('/:id', (req, res)=>{
 router.get('/:id/edit', (req, res)=>{
   Guitar.findById(req.params.id, (err, foundGuitar)=>{
     res.render(
-      'edit.ejs',
+      'guitars/edit.ejs',
       {
         guitar:foundGuitar
       }
@@ -84,12 +91,12 @@ router.put('/:id', (req, res)=>{
 });
 
 router.get('/new', (req,res)=>{
-  res.render('new.ejs');
+  res.render('guitars/new.ejs');
 });
 
 router.get('/', (req, res)=>{
   Guitar.find({}, (err, allGuitars)=>{
-    res.render('index.ejs', {
+    res.render('guitars/index.ejs', {
       guitars: allGuitars
     });
   });
@@ -97,7 +104,7 @@ router.get('/', (req, res)=>{
 
 router.get('/:id', (req, res)=>{
   Guitar.findById(req.params.id, (err, foundGuitar)=>{
-    res.render('show.ejs', {
+    res.render('guitars/show.ejs', {
       guitar:foundGuitar
     });
   })
@@ -113,5 +120,7 @@ router.post('/', (req, res)=>{
     res.redirect('/guitars');
   })
 });
+
+
 
 module.exports = router;

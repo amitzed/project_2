@@ -30,7 +30,7 @@ app.get('/', (req, res)=>{
   });
 });
 
-app.get('/app', (req, res)=>{
+app.get('/guitars/index', (req, res)=>{
     if(req.session.currentUser){
         res.send('the main app');
     } else {
