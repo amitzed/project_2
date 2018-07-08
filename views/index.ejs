@@ -18,14 +18,17 @@
                   <a href="/sessions/new">Log In</a>
               </li>
               <li>
-                  <a href="/users/new">Register</a>
+                  <a href="/users/new">Create Account</a>
               </li>
+             <!-- ONCE User Logged In as a Current User: -->
               <% if(currentUser) { %>
-                  <li>
-                      <form action="/sessions?_method=DELETE" method="POST">
-                          <input type="submit" value="Logout"/>
-                      </form>
-                  </li>
+                <br/>
+              <ul>
+                <form action="/sessions?_method=DELETE" method="POST">
+                <input type="submit" value="Logout"/>
+                </form>
+              </ul>
+
               <% } %>
           </ul>
       </nav>

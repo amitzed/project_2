@@ -18,10 +18,15 @@
               <% if(guitar.readyToBuild === true) { %>
                   checked
               <% } %>
-          /><br/>
+          /><br/><br/>
         <input type="submit" value="Update">
     </form>
 
+    <br/>
+    <nav>
+      <a href="/">Return to Main Page</a>
+    </nav>
+    <br/>
     <form action="/sessions?_method=DELETE" method="POST">
         <input type="submit" value="Logout"/>
     </form>

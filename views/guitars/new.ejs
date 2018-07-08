@@ -7,15 +7,44 @@
   <body>
     <h1>New Guitar Page</h1>
     <form action="/guitars" method="POST">
-      Brand: <input type="text" name="brand" required/><br/>
+      Brand:
+      <select class="selectpicker" data-style="btn-info" name="brand">
+              <optgroup label="Select Brand">
+                  <option name="brand" value="Gibson">Gibson</option>
+                  <option name="brand" value="Fender">Fender</option>
+                  <option name="brand" value="Jackson">Jackson</option>
+                  <option name="brand" value="B.C. Rich">B.C. Rich</option>
+              </optgroup>
+          </select>
+      <br/>
       Number of Strings: <input type="number" name="strings" min="6" max="12" required /><br/>
-      Type of Wood: <input type="text" name="wood" required /><br/>
-      Type of Fretboard: <input type="text" name="fretboard" required /><br/>
+      Type of Wood:
+      <select class="selectpicker" data-style="btn-info" name="wood">
+              <optgroup label="Select Wood">
+                  <option name="wood" value="Mahogany">Mahogany</option>
+                  <option name="wood" value="Bubinga">Bubinga</option>
+                  <option name="wood" value="Maple">Maple</option>
+                  <option name="wood" value="Alder">Alder</option>
+              </optgroup>
+          </select>
+      <br/>
+      Type of Fretboard:
+      <select class="selectpicker" data-style="btn-info" name="fretboard">
+              <optgroup label="Select Fretboard">
+                  <option name="fretboard" value="Ebony">Ebony</option>
+                  <option name="fretboard" value="Rosewood">Rosewood</option>               <option name="fretboard" value="Finished">Finished</option>    
+              </optgroup>
+          </select>
+      <br/>
 
-      Ready to Build: <input type="checkbox" name="readyToBuild"/><br/>
+      Ready to Build: <input type="checkbox" name="readyToBuild"/><br/><br/>
       <input type="submit" value="Create Your Guitar" />
     </form>
-
+    <br/>
+    <nav>
+      <a href="/">Return to Main Page</a>
+    </nav>
+    <br/>
     <form action="/sessions?_method=DELETE" method="POST">
         <input type="submit" value="Logout"/>
     </form>

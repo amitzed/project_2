@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const bassSchema = new mongoose.Schema({
-  brand: String,
+  brand: {type: String},
   strings: Number,
-  wood: String,
-  fretboard: String,
+  wood: {type: String},
+  fretboard: {type: String},
   readyToBuild: Boolean
 });
 
