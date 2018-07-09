@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <% include ../partials/head.ejs %>
+    <% include ../partials/nav.ejs %>
     <meta charset="utf-8">
     <title>String Theory</title>
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <h1>Guitars Edit Page</h1>
@@ -29,7 +35,7 @@
                </optgroup>
            </select>
        <br/>
-       Type of Fretboard: 
+       Type of Fretboard:
        <select class="selectpicker" data-style="btn-info" name="fretboard" value="<%=guitar.fretboard%>">
                <optgroup label="Select Fretboard">
                    <option name="fretboard" value="Ebony">Ebony</option>
@@ -55,6 +61,8 @@
     <form action="/sessions?_method=DELETE" method="POST">
         <input type="submit" value="Logout"/>
     </form>
+
+    <% include ../partials/footer.ejs %>
 
   </body>
 </html>

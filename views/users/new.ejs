@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <% include ../partials/head.ejs %>
+    <% include ../partials/nav.ejs %>
     <meta charset="utf-8">
     <title>String Theory</title>
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>Create an Account</h1>
+    <h1>Create an Account to Log In on Main Page</h1>
     <form action="/users" method="POST">
       <input type="text" name="username" placeholder="username">
+      <br/>
       <input type="password" name="password" />
+      <br/><br/>
       <input type="submit" value="Create User" />
     </form>
+
+    <% include ../partials/footer.ejs %>
+
   </body>
 </html>
