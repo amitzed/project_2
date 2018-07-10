@@ -18,6 +18,32 @@
   </head>
   <body>
     <h1>Bass Guitars Index Page</h1>
+    <br/>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav>
+            <a href="/basses/new">Create a New Bass Guitar</a>
+          </nav>
+        </div>
+
+        <div class="col">
+          <nav>
+            <a href="/">Return to Main Page</a>
+          </nav>
+        </div>
+        <div class="col">
+          <nav>
+            <form action="/sessions?_method=DELETE" method="POST">
+                <input class="btn btn-primary" type="submit" value="Logout"/>
+            </form>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <br/><br/>
+
     <ul>
       <% for(let i = 0; i < basses.length; i++){ %>
         <li>
@@ -36,7 +62,7 @@
           <form
           action="/basses/<%=basses[i].id%>?_method=DELETE" method="POST">
           <br/>
-            <input type="submit" value="DELETE"/>
+            <input class="btn btn-danger" type="submit" value="DELETE"/>
           </form>
           <br/>
           <a href="/basses/<%=basses[i].id%>/edit">
@@ -45,19 +71,6 @@
         </li>
       <% } %>
     </ul>
-    <nav>
-      <a href="/basses/new">Create a New Bass Guitar</a>
-    </nav>
-
-    <br/>
-    <nav>
-      <a href="/">Return to Main Page</a>
-    </nav>
-
-    <br/>
-    <form action="/sessions?_method=DELETE" method="POST">
-        <input type="submit" value="Logout"/>
-    </form>
 
     <% include ../partials/footer.ejs %>
 

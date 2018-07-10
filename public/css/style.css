@@ -3,6 +3,7 @@ h1 {
   font-size: 45px;
   font-family: 'Chela One', cursive;
   text-shadow: 10px 2px 40px black, -10px -2px 40px #fdd557;
+  text-align: center;
 }
 
 h2 {
@@ -22,6 +23,13 @@ body {
 
 .guitar1pic {
   box-shadow: 5px 2px 40px #fdd557, -5px -2px 40px #00DFFF;
+  border: solid 5px #DE6E16;
+  opacity: 0.7;
+  transition: border-width 0.6s linear;
+}
+
+.guitar1pic:hover {
+  border-width: 10px;
 }
 
 .jumbotron.hero-nature {
@@ -47,8 +55,8 @@ body {
 
 .bottom-right {
     position: absolute;
-    bottom: 8px;
-    right: 17px;
+    bottom: 18px;
+    right: 28px;
     font-size: 23px;
     font-family: 'Chela One', cursive;
     font-weight: lighter;
@@ -84,7 +92,8 @@ ul {
 }
 
 footer {
-  font-family: 'Chela One', cursive;
+  color: black;
+  font-family: 'Montserrat', helvetica;
   opacity: 0.7;
   text-align: center;
   position: fixed;
