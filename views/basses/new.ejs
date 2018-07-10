@@ -5,8 +5,15 @@
     <title>String Theory</title>
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-    <!-- CSS -->
+
+    <!-- BootStrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- My CSS Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <% include ../partials/head.ejs %>
+    <% include ../partials/nav.ejs %>
   </head>
   <body>
     <h1>New Bass Guitar Page</h1>
@@ -53,6 +60,8 @@
     <form action="/sessions?_method=DELETE" method="POST">
         <input type="submit" value="Logout"/>
     </form>
+
+    <% include ../partials/footer.ejs %>
 
   </body>
 </html>

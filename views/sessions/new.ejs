@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <% include ../partials/head.ejs %>
-    <% include ../partials/nav.ejs %>
     <meta charset="utf-8">
     <title>String Theory</title>
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
-    <!-- CSS -->
+
+    <!-- My CSS Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- BootStrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <% include ../partials/head.ejs %>
+    <% include ../partials/nav.ejs %>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1>Already a Member? Sign In!</h1>
+    <h2>Already a Member? Sign In!</h2>
     <form action="/sessions" method="POST">
       <input type="text" name="username" placeholder="username">
       <br/>
