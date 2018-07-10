@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>String Theory</title>
         <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
 
         <!-- BootStrap CDN-->
@@ -16,54 +17,68 @@
     <body>
       <div class="container">
         <br/><br/>
+
+        <div class="jumbotron hero-nature">
         <h1 class="text-uppercase">
             <% if(currentUser) { %>
-                Welcome to String <img src="img/guitarman.jpg" class="rounded" alt="" width="55px" height="55px"/>Theory <%=currentUser.username %>
+                Welcome to String <img src="img/guitarman.jpg" class="icon" alt="" width="55px" height="55px"/> Theory <%=currentUser.username %>
             <% } else { %>
-                Welcome to String<img src="img/guitarman.jpg" class="rounded" alt="" width="55px" height="55px"/>  Theory
+                Welcome to String <img src="img/guitarman.jpg" class="icon" alt="" width="55px" height="55px"/> Theory
             <% }%>
         </h1>
-        <h3></h3>
+        <h3>Custom Build Your Guitar</h3>
+        </div>
         <br/>
-        <% if(currentUser) { %>
-            <ul class="nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link" href="/guitars">Build Your Dream Guitars</a>
-              </li>
 
-              <li class="nav-item">
-                <a class="nav-link" href="/basses">Build Your Dream Basses</a>
-              </li>
-
-              <li class="nav-item">
-                <form class="nav-link" action="/sessions?_method=DELETE" method="POST">
-                <input  type="submit" value="Logout"/>
-                </form>
-              </li>
-            </ul>
-        <% } %>
-
-        <br/>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/sessions/new">Member Log In</a>
+        <div class="mainnav">
+          <% if(currentUser) { %>
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="/guitars">Build Your Dream Guitars</a>
                 </li>
-                <li>
-                    <a href="/users/new">Create Account</a>
-                </li>
-               <!-- ONCE User Logged In as a Current User: -->
-                <% if(currentUser) { %>
-                  <br/>
 
-                <% } %>
-            </ul>
-        </nav>
+                <li class="nav-item">
+                  <a class="nav-link" href="/basses">Build Your Dream Basses</a>
+                </li>
+
+                <li class="nav-item">
+                  <form class="nav-link" action="/sessions?_method=DELETE" method="POST">
+                  <input  type="submit" value="Logout"/>
+                  </form>
+                </li>
+              </ul>
+          <% } %>
+        </div>
+
+          <nav>
+            <div class="login">
+              <ul class="nav justify-content-center">
+                  <li class="nav-item">
+                      <a class="nav-link" href="/sessions/new">Member Log In</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/users/new">Create Account</a>
+                  </li>
+                 <!-- ONCE User Logged In as a Current User: -->
+                  <% if(currentUser) { %>
+                    <br/>
+
+                  <% } %>
+              </ul>
+            </div>
+          </nav>
+          <br/>
 
         <div class="text-center">
-          <img src="img/guitar1.png" class="img-fluid" alt="Responsive image"/>
+            <div class="guitar1pic">
+              <img src="img/guitar1.png" class="img-fluid" alt="Responsive image"/>
+            </div>
           <div class="bottom-right">Your Vision<br/>Your Creation<br/>Your Guitar</div>
         </div>
+
       </div>
     </body>
+    <footer>
+      Created by Amit Zaman
+    </footer>
 </html>

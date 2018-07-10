@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>String Theory</title>
     <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
 
     <!-- BootStrap CDN-->
@@ -17,6 +18,32 @@
   </head>
   <body>
     <h1>Guitars Index Page</h1>
+    <br/>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <nav>
+            <a href="/guitars/new">Create a New Guitar</a>
+          </nav>
+        </div>
+
+        <div class="col">
+          <nav>
+            <a href="/">Return to Main Page</a>
+          </nav>
+        </div>
+        <div class="col">
+          <nav>
+            <form action="/sessions?_method=DELETE" method="POST">
+                <input type="submit" value="Logout"/>
+            </form>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <br/><br/>
+
     <ul>
       <% for(let i = 0; i < guitars.length; i++){ %>
         <li>
@@ -44,19 +71,6 @@
         </li>
       <% } %>
     </ul>
-    <nav>
-      <a href="/guitars/new">Create a New Guitar</a>
-    </nav>
-
-    <br/>
-    <nav>
-      <a href="/">Return to Main Page</a>
-    </nav>
-
-    <br/>
-    <form action="/sessions?_method=DELETE" method="POST">
-        <input type="submit" value="Logout"/>
-    </form>
 
     <% include ../partials/footer.ejs %>
 
