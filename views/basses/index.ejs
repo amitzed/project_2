@@ -23,51 +23,58 @@
       <div class="row">
         <div class="col">
           <nav>
-            <a href="/basses/new">Create a New Bass Guitar</a>
+            <a class="btn btn-primary btn-lg" href="/basses/new">Create a New Bass Guitar</a>
           </nav>
         </div>
 
         <div class="col">
           <nav>
-            <a href="/">Return to Main Page</a>
+            <a class="btn btn-primary btn-lg" href="/">Return to Main Page</a>
           </nav>
         </div>
-        <div class="col">
+        <!-- <div class="col"> -->
           <nav>
             <form action="/sessions?_method=DELETE" method="POST">
-                <input class="btn btn-primary" type="submit" value="Logout"/>
+                <input class="btn btn-primary btn-lg" type="submit" value="Logout"/>
             </form>
           </nav>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
-
     <br/><br/>
 
     <ul>
       <% for(let i = 0; i < basses.length; i++){ %>
         <li>
+
+        <div class="container">
+          <div class="editOutput">
           Your
-            <a href="/basses/<%=basses[i].id%>">
+            <a href="/basses/<%=basses[i].id%>" style="color: white">
               <%=basses[i].brand; %>
             </a>
+
           Bass Guitar with <%=basses[i].strings; %>
-          strings which is made out of <%=basses[i].wood; %>
-          wood with a <%=basses[i].fretboard; %> fretboard:
+          Strings || Wood Type: <%=basses[i].wood; %>
+          || Fretboard: <%=basses[i].fretboard; %> |||
           <% if(basses[i].readyToBuild === true){ %>
             IS READY TO BE BUILT!
           <% } else { %>
-            CANNOT be built to these specs
+            *CANNOT* be built to these specs.
           <% } %>
+
+            <a class="btn btn-outline-primary" href="/basses/<%=basses[i].id%>/edit">
+              Edit
+            </a>
+          </div>
+        </div>
+
           <form
           action="/basses/<%=basses[i].id%>?_method=DELETE" method="POST">
-          <br/>
             <input class="btn btn-danger" type="submit" value="DELETE"/>
           </form>
           <br/>
-          <a href="/basses/<%=basses[i].id%>/edit">
-            Edit
-          </a>
+
         </li>
       <% } %>
     </ul>

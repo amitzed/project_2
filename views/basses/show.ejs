@@ -18,28 +18,31 @@
   </head>
   <body>
     <h1>Bass Guitars Show Page</h1>
-    Your <%=bass.brand%> Bass Guitar with <%=bass.strings%>
-    strings which is made out of <%=bass.wood%>
-    wood with a <%=bass.fretboard%> fret board:
-    <% if(bass.readyToBuild === true){ %>
-       IS READY TO BE BUILT!
-    <% } else { %>
-       Cannot be built to these specs.
-    <% } %>
-
     <br/><br/>
-    <nav>
-      <a href="/basses">Back to Bass Guitars Page</a>
-    </nav>
-    <br/>
-    <nav>
-      <a href="/">Return to Main Page</a>
-    </nav>
-    <br/>
-    <form action="/sessions?_method=DELETE" method="POST">
-        <input type="submit" value="Logout"/>
-    </form>
-
+    <div class="container">
+      <div class="showOutput">
+      Your <%=bass.brand%> Bass Guitar with <%=bass.strings%>
+      Strings || Wood Type: <%=bass.wood%>
+      || Fretboard: <%=bass.fretboard%><br/><br/>
+      <% if(bass.readyToBuild === true){ %>
+         IS READY TO BE BUILT!
+      <% } else { %>
+         *CANNOT* Be Built to These Specs
+      <% } %>
+      </div>
+      <br/><br/>
+      <center><nav>
+        <a href="/basses" style="color: #fdd557">Back to Bass Guitars Page</a>
+      </nav>
+      <br/>
+      <nav>
+        <a href="/" style="color: #fdd557">Return to Main Page</a>
+      </nav></center>
+      <br/>
+      <form action="/sessions?_method=DELETE" method="POST">
+          <input type="submit" value="Logout"/>
+      </form>
+  </div>
     <% include ../partials/footer.ejs %>
 
   </body>

@@ -17,15 +17,17 @@
     <% include ../partials/nav.ejs %>
   </head>
   <body>
-    <h2>Create an Account to Log In on Main Page</h2>
-    <form action="/users" method="POST">
-      <input type="text" name="username" placeholder="username">
+    <div class="container">
+      <center><h2 style="color: #fdd557">Create an Account to Log In on Main Page</h2></center>
       <br/>
-      <input type="password" name="password" />
-      <br/><br/>
-      <input type="submit" value="Create User" />
-    </form>
-
+      <form action="/users" method="POST">
+        <input type="text" name="username" placeholder="Create Username">
+        <br/><br/>
+        <input type="password" name="password" placeholder="Create Password" />
+        <br/><br/><br/>
+        <input class="btn btn-primary" type="submit" value="Create Account" />
+      </form>
+    </div>
     <% include ../partials/footer.ejs %>
 
   </body>

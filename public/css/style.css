@@ -17,6 +17,11 @@ h3 {
   font-weight: 350;
 }
 
+h4 {
+  font-family: 'Chela One', cursive;
+  text-shadow: -10px -2px 40px #fdd557;
+}
+
 body {
   background:url('/img/gtrheading.png');
 }
@@ -30,6 +35,34 @@ body {
 
 .guitar1pic:hover {
   border-width: 10px;
+}
+
+a {
+  border: solid 5px #DE6E16;
+  opacity: 0.8;
+  transition: border-width 0.5s linear;
+}
+
+a:hover {
+  border-width: 2px;
+}
+
+.editOutput {
+  font-family: 'Montserrat', helvetica;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.showOutput {
+  font-family: 'Montserrat', helvetica;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn {
+  font-family: 'Montserrat', helvetica;
 }
 
 .jumbotron.hero-nature {
@@ -89,6 +122,27 @@ ul {
   opacity: 0.6;
   animation-name: rainbow-move-change;
   animation-duration: 2s;
+}
+
+select, #stringNum {
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  font-family: 'Montserrat', helvetica;
+  margin-auto;
+  display:flex;
+  justify-content: center;
+  background-color: #00DFFF;
+  font-size: 20px;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  cursor: pointer;
 }
 
 footer {

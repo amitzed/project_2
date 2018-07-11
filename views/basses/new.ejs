@@ -18,49 +18,50 @@
   </head>
   <body>
     <h1>New Bass Guitar Page</h1>
-    <form action="/basses" method="POST">
-      Brand:
-      <select class="selectpicker" data-style="btn-info" name="brand">
-              <optgroup label="Select Brand">
-                  <option name="brand" value="Warwick">Warwick</option>
-                  <option name="brand" value="Rickenbacker">Rickenbacker</option>
-                  <option name="brand" value="Dean">Dean</option>
-              </optgroup>
-          </select>
-      <br/>
-      Number of Strings: <input type="number" name="strings" min="4" max="6" required /><br/>
-      Type of Wood:
-      <select class="selectpicker" data-style="btn-info" name="wood">
-              <optgroup label="Select Wood">
-                  <option name="wood" value="Mahogany">Mahogany</option>
-                  <option name="wood" value="Bubinga">Bubinga</option>
-                  <option name="wood" value="Basswood">Basswood</option>
-                  <option name="wood" value="Alder">Alder</option>
-              </optgroup>
-          </select>
-      <br/>
-      Type of Fretboard:
-      <select class="selectpicker" data-style="btn-info" name="fretboard">
-              <optgroup label="Select Fretboard">
-                  <option name="fretboard" value="Ebony">Ebony</option>
-                  <option name="fretboard" value="Rosewood">Rosewood</option>               <option name="fretboard" value="Finished">Finished</option>
-              </optgroup>
-          </select>
-      <br/>
-
-      Ready to Build: <input type="checkbox" name="readyToBuild"/><br/><br/>
-      <input type="submit" value="Create Your Bass Guitar" />
-    </form>
-
     <br/>
-    <nav>
-      <a href="/">Return to Main Page</a>
-    </nav>
-    <br/>
+    <div class="container">
+      <form action="/basses" method="POST">
+        <h2>Brand:</h2>
+        <select class="selectpicker" data-style="btn-info" name="brand">
+                <optgroup label="Select Brand">
+                    <option name="brand" value="Warwick">Warwick</option>
+                    <option name="brand" value="Rickenbacker">Rickenbacker</option>
+                    <option name="brand" value="Dean">Dean</option>
+                </optgroup>
+            </select>
+        <br/>
+        <h2>Number of Strings:</h2> <input id="stringNum" type="number" name="strings" min="4" max="6" required /><br/>
+        <h2>Type of Wood:</h2>
+        <select class="selectpicker" data-style="btn-info" name="wood">
+                <optgroup label="Select Wood">
+                    <option name="wood" value="Mahogany">Mahogany</option>
+                    <option name="wood" value="Bubinga">Bubinga</option>
+                    <option name="wood" value="Basswood">Basswood</option>
+                    <option name="wood" value="Alder">Alder</option>
+                </optgroup>
+            </select>
+        <br/>
+        <h2>Type of Fretboard:</h2>
+        <select class="selectpicker" data-style="btn-info" name="fretboard">
+                <optgroup label="Select Fretboard">
+                    <option name="fretboard" value="Ebony">Ebony</option>
+                    <option name="fretboard" value="Rosewood">Rosewood</option>               <option name="fretboard" value="Finished">Finished</option>
+                </optgroup>
+            </select>
+        <br/><br/>
 
-    <form action="/sessions?_method=DELETE" method="POST">
-        <input type="submit" value="Logout"/>
-    </form>
+        <h4>Ready to Build:<h4> <input type="checkbox" name="readyToBuild"/><br/><br/>
+        <input class="btn btn-primary btn-lg" type="submit" value="Create Your Bass Guitar" />
+      </form>
+
+      <br/>
+      <br/>
+      <br/>
+
+      <form action="/sessions?_method=DELETE" method="POST">
+          <input type="submit" value="Logout"/>
+      </form>
+  </div>
 
     <% include ../partials/footer.ejs %>
 

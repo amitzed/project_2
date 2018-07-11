@@ -23,51 +23,57 @@
       <div class="row">
         <div class="col">
           <nav>
-            <a href="/guitars/new">Create a New Guitar</a>
+            <a class="btn btn-primary btn-lg" href="/guitars/new">Create a New Guitar</a>
           </nav>
         </div>
 
         <div class="col">
           <nav>
-            <a href="/">Return to Main Page</a>
+            <a class="btn btn-primary btn-lg" href="/">Return to Main Page</a>
           </nav>
         </div>
-        <div class="col">
+        <!-- <div class="col"> -->
           <nav>
             <form action="/sessions?_method=DELETE" method="POST">
-                <input class="btn btn-primary" type="submit" value="Logout"/>
+                <input class="btn btn-primary btn-lg" type="submit" value="Logout"/>
             </form>
           </nav>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
-
     <br/><br/>
 
     <ul>
       <% for(let i = 0; i < guitars.length; i++){ %>
         <li>
-          Your
-            <a href="/guitars/<%=guitars[i].id%>">
-              <%=guitars[i].brand; %>
+
+          <div class="container">
+            <div class="editOutput">
+              Your
+              <a href="/guitars/<%=guitars[i].id%>" style="color: white">
+                <%=guitars[i].brand; %>
+              </a>
+              Guitar with <%=guitars[i].strings; %>
+              Strings || Wood Type: <%=guitars[i].wood; %>
+              || Fretboard: <%=guitars[i].fretboard; %> |||
+              <% if(guitars[i].readyToBuild === true){ %>
+                IS READY TO BE BUILT!
+              <% } else { %>
+                *CANNOT* be built to these specs.
+              <% } %>
+
+              <a class="btn btn-outline-primary" href="/guitars/<%=guitars[i].id%>/edit">
+                Edit
             </a>
-          Guitar with <%=guitars[i].strings; %>
-          strings which is made out of <%=guitars[i].wood; %>
-          wood with a <%=guitars[i].fretboard; %> fretboard:
-          <% if(guitars[i].readyToBuild === true){ %>
-            IS READY TO BE BUILT!
-          <% } else { %>
-            CANNOT be built to these specs
-          <% } %>
+            </div>
+          </div>
+
           <form
           action="/guitars/<%=guitars[i].id%>?_method=DELETE" method="POST">
-          <br/>
             <input class="btn btn-danger" type="submit" value="DELETE"/>
           </form>
           <br/>
-          <a href="/guitars/<%=guitars[i].id%>/edit">
-            Edit
-          </a>
+
         </li>
       <% } %>
     </ul>
