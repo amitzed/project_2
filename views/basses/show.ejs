@@ -22,26 +22,26 @@
     <div class="container">
       <div class="showOutput">
       Your <%=bass.brand%> Bass Guitar with <%=bass.strings%>
-      Strings <h2>.</h2> Wood Type: <%=bass.wood%>
-      <h2>.</h2> Fretboard: <%=bass.fretboard%><h1>. . .</h1>
+      Strings || Wood Type: <%=bass.wood%>
+      || Fretboard: <%=bass.fretboard%>
       <% if(bass.readyToBuild === true){ %>
-         IS READY TO BE BUILT!
+         <h1 style="color: #fdd557">IS READY TO BE BUILT! <a><img src="/img/rickreal.jpg" class="fluid" alt="" width="700px" height="300px"/></a></h1>
       <% } else { %>
-         *CANNOT* Be Built to These Specs
+         <h1 style="color: red">Is Not Ready To Be Built <a><img src="/img/guitaricon5.jpg" class="fluid" alt="" width="600px" height="300px"/></a></h1>
       <% } %>
       </div>
       <br/><br/>
-      <center><nav>
-        <a href="/basses" style="color: #fdd557">Back to Bass Guitars Page</a>
-      </nav>
-      <br/>
-      <nav>
-        <a href="/" style="color: #fdd557">Return to Main Page</a>
-      </nav></center>
-      <br/>
       <form action="/sessions?_method=DELETE" method="POST">
           <input type="submit" value="Logout"/>
       </form>
+      <br/><br/><br/><br/>
+      <nav>
+        <center><a href="/basses" style="color: #fdd557">Back to Bass Guitars Page</a>
+      </nav></center>
+      <br/>
+        <center><nav>
+          <a href="/" style="color: #fdd557">Return to Main Page</a>
+      </nav></center>
   </div>
     <% include ../partials/footer.ejs %>
 

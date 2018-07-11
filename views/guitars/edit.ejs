@@ -19,7 +19,7 @@
     <% include ../partials/nav.ejs %>
   </head>
   <body>
-    <h1>Guitars Edit Page</h1>
+    <h1>Edit Guitar</h1>
     <br/>
     <div class="container">
         <form action="/guitars/<%=guitar.id%>?_method=PUT"
@@ -55,7 +55,7 @@
                </select>
            <br/><br/>
 
-            Ready to Build:
+            <h4>Ready to Build ?</h4>
               <input type="checkbox" name="readyToBuild"
                   <% if(guitar.readyToBuild === true) { %>
                       checked

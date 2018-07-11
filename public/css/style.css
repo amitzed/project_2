@@ -124,6 +124,11 @@ ul {
   animation-duration: 2s;
 }
 
+.fluid {
+  border-radius: 45%;
+  animation: size-in 1s 1;
+}
+
 select, #stringNum {
   width:100%;
   height:100%;
