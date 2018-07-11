@@ -22,12 +22,12 @@
     <div class="container">
       <div class="showOutput">
       Your <%=guitar.brand%> Guitar with <%=guitar.strings%>
-      Strings || Wood Type: <%=guitar.wood%>
-      || Fretboard: <%=guitar.fretboard%><br/><br/>
+      Strings <h2>.</h2> Wood Type: <%=guitar.wood%>
+      <h2>.</h2> Fretboard: <%=guitar.fretboard%><h1>. . .</h1>
       <% if(guitar.readyToBuild === true){ %>
          IS READY TO BE BUILT!
       <% } else { %>
-         *CANNOT* Be Built to These Specs
+         <h4>*CANNOT* Be Built to These Specs</h4>
       <% } %>
     </div>
       <br/><br/>

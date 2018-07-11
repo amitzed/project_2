@@ -5,7 +5,8 @@ const guitarSchema = new mongoose.Schema({
   strings: Number,
   wood: {type: String},
   fretboard: {type: String},
-  readyToBuild: Boolean
+  readyToBuild: Boolean,
+  img: String
 });
 
 const Guitar = mongoose.model('Guitar', guitarSchema);

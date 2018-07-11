@@ -55,11 +55,11 @@
               </a>
               Guitar with <%=guitars[i].strings; %>
               Strings || Wood Type: <%=guitars[i].wood; %>
-              || Fretboard: <%=guitars[i].fretboard; %> |||
-              <% if(guitars[i].readyToBuild === true){ %>
+              || Fretboard: <%=guitars[i].fretboard; %> ||
+              <a><% if(guitars[i].readyToBuild === true){ %>
                 IS READY TO BE BUILT!
               <% } else { %>
-                *CANNOT* be built to these specs.
+                Is *NOT* Ready to Build</a>
               <% } %>
 
               <a class="btn btn-outline-primary" href="/guitars/<%=guitars[i].id%>/edit">
