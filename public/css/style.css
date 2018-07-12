@@ -22,6 +22,13 @@ h4 {
   text-shadow: -10px -2px 40px #fdd557;
 }
 
+h5 {
+  font-family: 'Montserrat', helvetica;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
 body {
   background:url('/img/gtrheading.png');
 }
@@ -63,6 +70,11 @@ a:hover {
 
 .btn {
   font-family: 'Montserrat', helvetica;
+  border-radius: 6%;
+}
+
+.btn-success {
+  border-radius: 45%;
 }
 
 .jumbotron.hero-nature {
@@ -159,6 +171,11 @@ footer {
   bottom: 0;
   width: 100%;
   padding-bottom: 20px;
+}
+
+.editOutput {
+  font-size: 16px;
+  text-align: center;
 }
 
 /* ANIMATION */

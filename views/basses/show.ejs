@@ -17,15 +17,17 @@
     <% include ../partials/nav.ejs %>
   </head>
   <body>
-    <h1>Bass Guitars Show Page</h1>
-    <br/><br/>
+    <h1>Bass Guitar Build</h1>
+    <br/>
     <div class="container">
       <div class="showOutput">
-      Your <%=bass.brand%> Bass Guitar with <%=bass.strings%>
+      Your <h1 style="color: #fdd557"><%=bass.brand%> Bass Guitar</h1> with <%=bass.strings%>
       Strings || Wood Type: <%=bass.wood%>
       || Fretboard: <%=bass.fretboard%>
       <% if(bass.readyToBuild === true){ %>
-         <h1 style="color: #fdd557">IS READY TO BE BUILT! <a><img src="/img/rickreal.jpg" class="fluid" alt="" width="700px" height="300px"/></a></h1>
+         <h1 style="color: #fdd557">IS READY TO BE BUILT! <a><h5>Place Your Order & <br/>We'll E-mail You Shortly <br/>to Review Pricing & Finalize Order Acceptance</h5><img src="/img/rickreal.jpg" class="fluid" alt="" width="700px" height="300px"/></a></h1>
+
+         <input class="btn btn-success" type="submit" value="Place Order" />
       <% } else { %>
          <h1 style="color: red">Is Not Ready To Be Built <a><img src="/img/guitaricon5.jpg" class="fluid" alt="" width="600px" height="300px"/></a></h1>
       <% } %>

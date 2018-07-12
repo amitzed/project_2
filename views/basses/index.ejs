@@ -56,9 +56,11 @@
 
           Bass Guitar with <%=basses[i].strings; %>
           Strings || Wood Type: <%=basses[i].wood; %>
-          || Fretboard: <%=basses[i].fretboard; %> ||
-          <a><% if(basses[i].readyToBuild === true){ %>
+          || Fretboard: <%=basses[i].fretboard; %>
+          <br/><a style="color: white"><% if(basses[i].readyToBuild === true){ %>
             IS READY TO BE BUILT!
+            <a href="/basses/<%=basses[i].id%>" type="submit"/>Order?</a>
+
           <% } else { %>
             Is *NOT* Ready to Build</a>
           <% } %>
