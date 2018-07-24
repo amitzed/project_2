@@ -1,4 +1,4 @@
-# [String Theory](https://rocky-eyrie-78125.herokuapp.com/ "Hey")
+# [String Theory](https://rocky-eyrie-78125.herokuapp.com/)
 
 ### *General Assembly Web Development Immersive Project 2: "String Theory"* - **Create a Custom Guitar**
 
