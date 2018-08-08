@@ -8,7 +8,7 @@
 
 ### In Builing this project, *Node.js, Mongoose, Express and EJS* were used and adhered to the MVC file structure.  Additionally, several models had all 7 RESTful routes used and full CRUD.
 
-### The logo animation and other animations were the most fun to create. In the app, custom guitar specs can be added, edited, updated, deleted.  In the future, I would like for the guitar pictures to be more specific to each instrument's build.  
+### The logo animation and other animations were the most fun to create. In the app, after a user account is created, custom guitar specs can be added, edited, updated, deleted.  In the future, I would like for the guitar pictures to be more specific to each instrument's build.  
 
 
 <p align="center">
