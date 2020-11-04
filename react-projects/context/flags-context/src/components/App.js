@@ -1,5 +1,6 @@
 // import logo from '../logo.svg';
 import React from 'react';
+import LanguageContext from '../contexts/LanguageContext';
 
 import './App.css';
 
@@ -23,8 +24,10 @@ export default class App extends React.Component {
         <i className="us flag" onClick={() => this.onLanguageChange('english')} />
         <i className="nl flag" onClick={() => this.onLanguageChange('dutch')} />
 
-        <UserCreate />
-        
+        <LanguageContext.Provider value={this.state.language}>
+          <UserCreate />
+        </LanguageContext.Provider>
+
         <div className="ui link cards" style={{marginTop: '4rem'}}>
           <div className="card">
             <div className="image">
@@ -68,7 +71,7 @@ export default class App extends React.Component {
                 Joined in 2011
               </span>
               <span>
-                <i class="user icon"></i>
+                <i className="user icon"></i>
                 35 Friends
               </span>
             </div>
